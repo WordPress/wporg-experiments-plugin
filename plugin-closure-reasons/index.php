@@ -79,7 +79,7 @@ function wp_plugin_closed_row( $file, $plugin_data ) {
 		'security-issue'                => _x( 'A security issue is known to exist within the plugin.', 'Plugin closure reason' ),
 		'author-request'                => _x( 'The author of this plugin no longer supports it, and requested the plugin be closed.', 'Plugin closure reason' ),
 		'guideline-violation'           => _x( 'The plugin has been suspended due to a Guideline Violation.', 'Plugin closure reason' ),
-		'licensing-trademark-violation' => _x( 'The plugin has been suspended due to a Licensing/Trademark Violation', 'Plugin closure reason' ),
+		'licensing-trademark-violation' => _x( 'The plugin has been suspended due to a Licensing/Trademark Violation.', 'Plugin closure reason' ),
 		'merged-into-core'              => _x( 'This plugin is no longer required, as the functionality is now provided by WordPress.', 'Plugin closure reason' ),
 		'unused'                        => _x( 'This plugin is unused.', 'Plugin closure reason' ),
 		'unknown'                       => _x( 'The reason is unknown.', 'Plugin closure reason' ),
@@ -114,7 +114,7 @@ function wp_plugin_closed_row( $file, $plugin_data ) {
 
 	printf(
 		/* translators: 1: Date the plugin was closed, 2: Reason the plugin was closed. */
-		__( 'This plugin has been closed as of %1$s and is no longer available for new installs. %2$s.' ),
+		__( 'This plugin has been closed as of %1$s and is no longer available for new installs. %2$s' ),
 		date_i18n( get_option( 'date_format' ), strtotime( $response->closed_on ) ),
 		$closure_reason_text
 	);
