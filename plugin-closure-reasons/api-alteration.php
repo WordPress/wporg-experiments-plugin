@@ -3,7 +3,7 @@ namespace WordPressdotorg\Experiments\PluginClosureReasons;
 use function WordPressdotorg\Experiments\Helpers\static_store as store;
 
 /**
- * Intercept the request to the plugin update check API, and redirect it to v2 of the same API.
+ * Intercept the request to the plugin update check API, and redirect it to v1.2 of the same API.
  *
  * @param object $filter_var The value to return instead of the result.
  * @param array  $parsed_args HTTP request arguments.
@@ -19,7 +19,7 @@ function pre_http_request( $filter_var, $parsed_args, $url ) {
 		return $filter_var;
 	}
 
-	// Upgrade version..
+	// Upgrade version, retaining all other URL pieces.
 	$url = str_replace( '/1.1/', '/1.2/', $url );
 
 	// This field isn't needed anymore.
@@ -55,7 +55,7 @@ function alter_transient( $value ) {
 			return;
 		}
 
-		// Overwrite 
+		// Overwrite.
 		$item = (object) array_merge(
 			(array) $item,
 			(array) reset( $item->autoupdate ),
