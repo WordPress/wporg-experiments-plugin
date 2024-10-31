@@ -1,11 +1,12 @@
 <?php
 namespace WordPressdotorg\Experiments;
 /**
- * Plugin Name: WordPress.org Experiments
+ * Plugin Name: WordPress.org Experiments - Experimental core features
  * Plugin URI:  https://wordpress.org/plugins/wporg-experiments/
  * Description: A plugin to test new features and ideas for WordPress.org in Core.
  * Author:      WordPress.org contributors
  * Version:     0.1
+ * License:     GPLv2 or later
  * Text Domain: wporg-experiments
  */
 

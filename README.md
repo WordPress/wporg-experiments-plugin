@@ -1,4 +1,4 @@
-# Experimental WordPress.org features
+# WordPress.org Experiments - Experimental core features
  * Contributors: wordpressdotorg, dd32
  * Requires at least: 6.7
  * Tested up to: 6.8
